@@ -1,0 +1,3 @@
+# Direct dependency specification; install.py uses the complete requirements.lock.
+# Keep both files in sync with the Textual version exercised by the Nix checks.
+textual==8.2.8

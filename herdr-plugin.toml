@@ -1,0 +1,23 @@
+id = "herdr.worktree-tools"
+name = "Worktree Tools"
+version = "0.3.0"
+min_herdr_version = "0.9.3"
+description = "Commit unfinished work if needed, merge the selected worktree, and remove it safely"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["python3", "-E", "-s", "install.py"]
+
+[[actions]]
+id = "merge-delete"
+title = "Merge & delete worktree…"
+contexts = ["workspace"]
+command = ["sh", "launch.sh", "--open"]
+
+[[panes]]
+id = "merge-delete"
+title = "Merge & delete worktree"
+placement = "popup"
+width = 64
+height = 18
+command = ["sh", "launch.sh"]
